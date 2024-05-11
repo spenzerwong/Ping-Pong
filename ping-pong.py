@@ -19,7 +19,7 @@ class GameSprite(sprite.Sprite):
     def reset(self):
         window.blit(self.image, (self.rect.x, self.rect.y))
 
-class Ball():
+class Ball(GameSprite):
     def __init__(self,player_image,player_x,player_y,player_speed):
         super().__init__()
         self.image = transform.scale(image.load(player_image),(75,75))
